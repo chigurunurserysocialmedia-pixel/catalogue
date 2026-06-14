@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chiguru Nursery — Fruit Plant Catalogue | ಚಿಗುರು ನರ್ಸರಿ</title>
+<meta name="description" content="Grafted fruit plants from Chiguru Nursery. Mango, Jackfruit, Guava and 1500+ varieties. Order on WhatsApp. ಕಸಿ ಹಣ್ಣಿನ ಗಿಡಗಳು — ಚಿಗುರು ನರ್ಸರಿ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=Noto+Sans+Kannada:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --leaf:#2E5430;        /* mature leaf green */
+    --leaf-deep:#1F3A21;
+    --chiguru:#C2573B;     /* tender new-leaf copper */
+    --chiguru-soft:#F3DDD4;
+    --paper:#F4F7EF;       /* pale leaf-tint background */
+    --ink:#22301F;
+    --whatsapp:#1FAF54;
+    --card:#FFFFFF;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Atkinson Hyperlegible','Noto Sans Kannada',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+    font-size:17px;
+    padding-bottom:74px; /* room for sticky bar */
+  }
+  h1,h2,h3,.display{font-family:'Bricolage Grotesque','Noto Sans Kannada',sans-serif}
+  .kn{font-family:'Noto Sans Kannada',sans-serif}
+  .kn-h{
+    font-family:'Noto Sans Kannada',sans-serif;font-weight:700;
+    font-size:clamp(1.05rem,3vw,1.35rem);color:var(--chiguru);margin-bottom:10px;
+  }
+  a{color:var(--leaf)}
+  img{max-width:100%;display:block}
+  .wrap{max-width:880px;margin:0 auto;padding:0 18px}
+
+  /* ===== Header ===== */
+  header{
+    background:linear-gradient(160deg,var(--leaf-deep) 0%,var(--leaf) 70%);
+    color:#fff;
+    padding:34px 0 42px;
+    position:relative;
+    overflow:hidden;
+  }
+  header::after{ /* tender leaf glow */
+    content:"";
+    position:absolute;right:-80px;top:-80px;
+    width:280px;height:280px;border-radius:50%;
+    background:radial-gradient(circle,rgba(194,87,59,.45),transparent 70%);
+  }
+  .brand{display:flex;align-items:center;gap:10px;margin-bottom:22px}
+  .brand .leaf{font-size:1.6rem}
+  .brand strong{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.35rem;letter-spacing:.5px}
+  .kannada{opacity:.85;font-size:.95rem}
+  header h1{
+    font-size:clamp(1.8rem,5vw,2.7rem);
+    font-weight:800;line-height:1.18;max-width:20ch;
+  }
+  header h1 em{font-style:normal;color:#F0B9A6}
+  header .kn-h{color:#F0B9A6;margin-top:10px;margin-bottom:0}
+  header p.sub{margin:14px 0 8px;max-width:48ch;opacity:.92}
+  header p.sub.kn{margin-top:4px;margin-bottom:24px;opacity:.88}
+  /* ===== CTA buttons ===== */
+  .cta-row{display:flex;flex-direction:column;gap:12px;width:100%}
+  @media(min-width:520px){.cta-row{flex-direction:row;flex-wrap:wrap;width:auto}}
+  .btn{
+    display:flex;align-items:center;justify-content:center;gap:9px;
+    padding:15px 26px;border-radius:14px;
+    font-weight:700;text-decoration:none;font-size:1rem;
+    border:none;cursor:pointer;min-height:52px;
+    transition:filter .15s,transform .1s;
+    text-align:center;
+  }
+  .btn:active{transform:scale(.97)}
+  .btn-wa{
+    background:var(--whatsapp);color:#fff;
+    box-shadow:0 4px 14px rgba(31,175,84,.35);
+  }
+  .btn-wa:hover{filter:brightness(1.08)}
+  .btn-ghost{
+    background:rgba(255,255,255,.14);color:#fff;
+    border:2px solid rgba(255,255,255,.55);
+  }
+  .btn-ghost:hover{background:rgba(255,255,255,.22)}
+  @media(min-width:520px){
+    .btn{padding:14px 24px;border-radius:999px}
+  }
+
+  /* ===== Trust strip ===== */
+  .trust{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:14px;
+    margin:-26px auto 0;position:relative;z-index:2;
+  }
+  @media(min-width:680px){.trust{grid-template-columns:repeat(4,1fr)}}
+  .trust div{
+    background:var(--card);border-radius:14px;padding:16px 14px;
+    box-shadow:0 2px 10px rgba(34,48,31,.08);text-align:center;
+  }
+  .trust b{display:block;font-family:'Bricolage Grotesque';font-size:1.25rem;color:var(--chiguru)}
+  .trust span{font-size:.84rem;color:#4a5a45;display:block;line-height:1.45}
+
+  /* ===== Sections ===== */
+  section{padding:46px 0 8px}
+  .eyebrow{
+    display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--chiguru);margin-bottom:8px;
+  }
+  section h2{font-size:clamp(1.5rem,4vw,2.1rem);font-weight:800;margin-bottom:2px}
+  .lede{max-width:60ch;color:#3c4a38;margin-bottom:6px}
+  .lede.kn{margin-bottom:24px}
+
+  /* ===== About ===== */
+  .about-card{
+    background:var(--card);border-radius:18px;padding:24px;
+    border-left:6px solid var(--chiguru);
+    box-shadow:0 2px 10px rgba(34,48,31,.06);
+  }
+  .about-card p{margin-bottom:12px}
+  .about-card p.kn{color:#3c4a38}
+  .about-card .founder{margin-top:6px;font-weight:700;margin-bottom:0}
+  .about-card .founder span{display:block;font-weight:400;font-size:.88rem;color:#5a6a55}
+
+  /* ===== Fruit cards (plant tags) ===== */
+  .grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:20px}
+  @media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+  details.tag{
+    background:var(--card);border-radius:16px;
+    box-shadow:0 2px 8px rgba(34,48,31,.07);
+    overflow:hidden;border-top:5px solid var(--leaf);
+  }
+  details.tag[open]{border-top-color:var(--chiguru)}
+  summary{
+    list-style:none;display:flex;align-items:center;gap:14px;
+    padding:16px;cursor:pointer;
+  }
+  summary::-webkit-details-marker{display:none}
+  .fruit-pic{
+    width:58px;height:58px;border-radius:50%;flex-shrink:0;
+    background:var(--chiguru-soft);display:flex;align-items:center;justify-content:center;
+    font-size:1.4rem;object-fit:cover;
+  }
+  /* PHOTOS: replace each placeholder div with
+     <img class="fruit-pic" src="photos/jackfruit.jpg" alt="Jackfruit">  (thumbnail)
+     <img class="fruit-photo" src="photos/jackfruit.jpg" alt="Jackfruit plant">  (big photo)
+     Same file can be used for both. */
+  .ph{
+    background:repeating-linear-gradient(45deg,#E9F0E2,#E9F0E2 10px,#E1EAD8 10px,#E1EAD8 20px);
+    display:flex;align-items:center;justify-content:center;
+    color:#5a6a55;border:2px dashed #B9C9AE;
+  }
+  .fruit-pic.ph::before{content:"📷"}
+  .fruit-photo{width:100%;aspect-ratio:16/9;border-radius:12px;margin-bottom:12px;object-fit:cover}
+  div.fruit-photo.ph{flex-direction:column;font-size:.85rem;font-weight:700;gap:2px}
+  .fruit-photo.ph::before{content:"📷";font-size:1.7rem}
+  .fruit-photo.ph::after{content:"Plant photo goes here · ಗಿಡದ ಫೋಟೋ ಇಲ್ಲಿ"}
+  .fruit-head{flex:1}
+  .fruit-head h3{font-size:1.12rem;font-weight:700}
+  .fruit-head small{color:#5a6a55;font-size:.83rem;display:block;line-height:1.45}
+  .chev{
+    width:28px;height:28px;border-radius:50%;background:var(--paper);
+    display:flex;align-items:center;justify-content:center;
+    transition:transform .25s;color:var(--leaf);font-weight:700;flex-shrink:0;
+  }
+  details[open] .chev{transform:rotate(180deg)}
+  .tag-body{padding:12px 16px 18px}
+  .variety-grid{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:10px;
+  }
+  @media(min-width:480px){.variety-grid{grid-template-columns:repeat(3,1fr)}}
+  .variety{
+    background:var(--paper);border-radius:12px;overflow:hidden;
+    text-align:center;font-size:.83rem;font-weight:600;
+  }
+  .variety-img{
+    width:100%;aspect-ratio:1/1;object-fit:cover;display:block;
+  }
+  div.variety-img.ph{
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:4px;font-size:.78rem;font-weight:700;color:#5a6a55;
+    background:repeating-linear-gradient(45deg,#E9F0E2,#E9F0E2 8px,#E1EAD8 8px,#E1EAD8 16px);
+    border:2px dashed #B9C9AE;
+  }
+  .variety-img.ph::before{content:"📷";font-size:1.4rem}
+  .variety-name{padding:8px 6px;line-height:1.35;color:var(--ink)}
+  .variety-name .kn{display:block;font-weight:400;font-size:.78rem;color:#5a6a55}
+
+  /* ===== Press / videos ===== */
+  .press-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:20px}
+  @media(min-width:640px){.press-grid{grid-template-columns:repeat(3,1fr)}}
+  .press{
+    background:var(--card);border-radius:16px;padding:18px;
+    box-shadow:0 2px 8px rgba(34,48,31,.07);text-decoration:none;color:var(--ink);
+    display:block;border-bottom:4px solid var(--leaf);
+  }
+  .press:hover{border-bottom-color:var(--chiguru)}
+  .press .play{
+    width:44px;height:44px;border-radius:50%;background:var(--chiguru);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:12px;
+  }
+  .press h3{font-size:1.02rem;margin-bottom:6px}
+  .press p{font-size:.86rem;color:#5a6a55;margin-bottom:4px}
+  .press span{display:inline-block;margin-top:8px;font-size:.84rem;font-weight:700;color:var(--leaf)}
+
+  /* ===== Contact ===== */
+  .contact{
+    background:linear-gradient(160deg,var(--leaf) 0%,var(--leaf-deep) 100%);
+    color:#fff;border-radius:22px;padding:34px 24px;margin:40px 0 30px;
+    text-align:center;
+  }
+  .contact h2{color:#fff}
+  .contact .kn-h{color:#F0B9A6}
+  .contact p{opacity:.9;max-width:46ch;margin:8px auto}
+  .contact p.last{margin-bottom:22px}
+  .contact .cta-row{
+    align-items:center;
+    max-width:420px;margin:0 auto;
+  }
+  @media(min-width:520px){
+    .contact .cta-row{justify-content:center;max-width:none}
+    .contact .cta-row .btn{min-width:200px}
+  }
+  .social-row{
+    display:flex;gap:10px;justify-content:center;
+    margin-top:22px;flex-wrap:wrap;
+  }
+  .social-row a{
+    color:#fff;text-decoration:none;font-weight:700;font-size:.88rem;
+    display:inline-flex;align-items:center;gap:7px;
+    padding:10px 18px;border-radius:999px;min-height:44px;
+    background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);
+    transition:background .15s;
+  }
+  .social-row a:hover{background:rgba(255,255,255,.26)}
+  .social-row a:active{transform:scale(.96)}
+  footer{padding:0 0 30px;text-align:center;font-size:.82rem;color:#6a7a65}
+  footer .kn{display:block;margin-top:4px}
+
+  /* ===== Sticky bar ===== */
+  .sticky-bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    display:flex;background:var(--leaf-deep);
+    box-shadow:0 -4px 16px rgba(0,0,0,.25);
+    border-top:2px solid rgba(255,255,255,.08);
+  }
+  .sticky-bar a{
+    display:flex;flex-direction:row;align-items:center;justify-content:center;
+    gap:7px;padding:0 10px;color:#fff;text-decoration:none;
+    font-weight:700;font-size:.88rem;white-space:nowrap;
+    height:56px;transition:filter .15s;flex:1;overflow:hidden;
+  }
+  .sticky-bar a:active{filter:brightness(1.15)}
+  .sticky-bar .s-icon{font-size:1.25rem;flex-shrink:0;line-height:1}
+  .sticky-bar .s-wa{
+    background:var(--whatsapp);flex:2;
+    border-right:1px solid rgba(255,255,255,.18);
+  }
+  .sticky-bar .s-call{
+    background:var(--leaf);flex:1;
+    border-right:1px solid rgba(255,255,255,.12);
+  }
+  .sticky-bar .s-yt{
+    background:var(--leaf-deep);flex:1;
+    border-left:1px solid rgba(255,255,255,.12);
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .chev{transition:none}
+  }
+  a:focus-visible,summary:focus-visible,.btn:focus-visible{
+    outline:3px solid var(--chiguru);outline-offset:2px;border-radius:6px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <span class="leaf">🌱</span>
+      <div>
+        <strong>CHIGURU NURSERY</strong>
+        <div class="kannada">ಚಿಗುರು ನರ್ಸರಿ · the tender new leaf</div>
+      </div>
+    </div>
+    <h1>Fruit plants that grow with your family, <em>for generations.</em></h1>
+    <div class="kn-h">ನಿಮ್ಮ ಕುಟುಂಬದೊಂದಿಗೆ ಬೆಳೆಯುವ ಹಣ್ಣಿನ ಗಿಡಗಳು — ತಲೆಮಾರುಗಳಿಗಾಗಿ.</div>
+    <p class="sub">Grafted mango, jackfruit, guava and 1500+ varieties — raised with 20+ years of horticulture experience. Trusted supplier to government agencies, NGOs and horticulturists across India.</p>
+    <p class="sub kn">ಕಸಿ ಮಾವು, ಹಲಸು, ಸೀಬೆ ಮತ್ತು 1500+ ತಳಿಗಳು — 20+ ವರ್ಷಗಳ ತೋಟಗಾರಿಕೆ ಅನುಭವದಿಂದ ಬೆಳೆಸಲಾಗಿದೆ. ಸರ್ಕಾರಿ ಸಂಸ್ಥೆಗಳು, ಎನ್‌ಜಿಒಗಳು ಮತ್ತು ತೋಟಗಾರರ ವಿಶ್ವಾಸಾರ್ಹ ಪೂರೈಕೆದಾರರು.</p>
+    <div class="cta-row">
+      <a class="btn btn-wa" href="https://wa.me/919482063944?text=Hi%20Chiguru%20Nursery%2C%20I%20saw%20your%20catalogue%20and%20want%20to%20know%20more.">💬 Order on WhatsApp · ವಾಟ್ಸಾಪ್</a>
+      <a class="btn btn-ghost" href="#fruits">See the plants · ಗಿಡಗಳು ↓</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="trust">
+    <div><b>1500+</b><span>plant varieties<br><span class="kn">ಗಿಡಗಳ ತಳಿಗಳು</span></span></div>
+    <div><b>20+ yrs</b><span>horticulture experience<br><span class="kn">ತೋಟಗಾರಿಕೆ ಅನುಭವ</span></span></div>
+    <div><b>Govt &amp; NGO</b><span>trusted supplier<br><span class="kn">ವಿಶ್ವಾಸಾರ್ಹ ಪೂರೈಕೆದಾರರು</span></span></div>
+    <div><b>All year</b><span>plants available<br><span class="kn">ವರ್ಷವಿಡೀ ಗಿಡಗಳು ಲಭ್ಯ</span></span></div>
+  </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap">
+    <span class="eyebrow">Our story · ನಮ್ಮ ಕಥೆ</span>
+    <h2>One green thumb, thousands of trees</h2>
+    <div class="kn-h">ಒಂದು ಹಸಿರು ಕೈ, ಸಾವಿರಾರು ಮರಗಳು</div>
+    <div class="about-card">
+      <p>Chiguru Nursery began in 2014 as a hobby — grafting hibiscus and roses so one plant could bloom in many colours. That hobby grew into a nursery now known for its grafts of mango, jackfruit and guava. Every sapling that leaves Chiguru carries the same care: a plant that will give your home tasty fruit for decades, worth more than gold.</p>
+      <p class="kn">ಚಿಗುರು ನರ್ಸರಿ 2014ರಲ್ಲಿ ಹವ್ಯಾಸವಾಗಿ ಆರಂಭವಾಯಿತು — ಒಂದೇ ಗಿಡದಲ್ಲಿ ಹಲವು ಬಣ್ಣದ ಹೂ ಅರಳುವಂತೆ ದಾಸವಾಳ, ಗುಲಾಬಿ ಕಸಿ ಮಾಡುವ ಮೂಲಕ. ಆ ಹವ್ಯಾಸ ಇಂದು ಮಾವು, ಹಲಸು, ಸೀಬೆ ಕಸಿಗಳಿಗೆ ಹೆಸರಾದ ನರ್ಸರಿಯಾಗಿ ಬೆಳೆದಿದೆ. ಚಿಗುರಿನಿಂದ ಹೊರಡುವ ಪ್ರತಿ ಸಸಿಯಲ್ಲೂ ಅದೇ ಕಾಳಜಿ ಇದೆ — ದಶಕಗಳ ಕಾಲ ನಿಮ್ಮ ಮನೆಗೆ ರುಚಿಯಾದ ಹಣ್ಣು ನೀಡುವ, ಚಿನ್ನಕ್ಕಿಂತ ಬೆಲೆಬಾಳುವ ಗಿಡ.</p>
+      <p class="founder">Sarvesh Rao <span>Founder, Chiguru Nursery · ಸಂಸ್ಥಾಪಕರು, ಚಿಗುರು ನರ್ಸರಿ</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FRUITS ================= -->
+<section id="fruits">
+  <div class="wrap">
+    <span class="eyebrow">The catalogue · ಗಿಡಗಳ ಪಟ್ಟಿ</span>
+    <h2>Our fruit plants</h2>
+    <div class="kn-h">ನಮ್ಮ ಹಣ್ಣಿನ ಗಿಡಗಳು</div>
+    <p class="lede">Tap any plant to see when it fruits, how easy it is to grow, and the best time to plant. Not sure what suits your space? Just ask us on WhatsApp — we'll guide you.</p>
+    <p class="lede kn">ಯಾವ ಗಿಡ ಯಾವಾಗ ಹಣ್ಣು ಕೊಡುತ್ತದೆ, ಬೆಳೆಸುವುದು ಎಷ್ಟು ಸುಲಭ, ನೆಡಲು ಉತ್ತಮ ಸಮಯ ಯಾವುದು — ತಿಳಿಯಲು ಗಿಡದ ಮೇಲೆ ಟ್ಯಾಪ್ ಮಾಡಿ. ಸಂದೇಹವಿದ್ದರೆ ವಾಟ್ಸಾಪ್‌ನಲ್ಲಿ ಕೇಳಿ — ನಾವು ಸಹಾಯ ಮಾಡುತ್ತೇವೆ.</p>
+
+    <div class="grid">
+
+      <!-- JACKFRUIT -->
+      <details class="tag">
+        <summary>
+          <!-- Replace with: <img class="fruit-pic" src="photos/jackfruit.jpg" alt="Jackfruit"> -->
+          <div class="fruit-pic ph" aria-hidden="true"></div>
+          <div class="fruit-head"><h3>Jackfruit · ಹಲಸು</h3><small>Grafted · Our speciality · ಕಸಿ ಗಿಡ, ನಮ್ಮ ವಿಶೇಷ</small></div>
+          <div class="chev">⌄</div>
+        </summary>
+                <div class="tag-body">
+          <!-- VARIETIES: replace placeholder divs with <img class="variety-img" src="photos/jackfruit-VARIETY.jpg"> -->
+          <div class="variety-grid">
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/jackfruit-siddu.jpg" alt="Siddu"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Siddu<span class="kn">ಸಿದ್ದು</span></div>
+          </div>
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/jackfruit-singapore.jpg" alt="Singapore"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Singapore<span class="kn">ಸಿಂಗಾಪೂರ್</span></div>
+          </div>
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/jackfruit-vietnam.jpg" alt="Vietnam Early"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Vietnam Early<span class="kn">ವಿಯೆಟ್ನಾಂ ಅರ್ಲಿ</span></div>
+          </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- MANGO -->
+      <details class="tag">
+        <summary>
+          <!-- Replace with: <img class="fruit-pic" src="photos/mango.jpg" alt="Mango"> -->
+          <div class="fruit-pic ph" aria-hidden="true"></div>
+          <div class="fruit-head"><h3>Mango · ಮಾವು</h3><small>Grafted · Our speciality · ಕಸಿ ಗಿಡ, ನಮ್ಮ ವಿಶೇಷ</small></div>
+          <div class="chev">⌄</div>
+        </summary>
+                <div class="tag-body">
+          <!-- VARIETIES: replace placeholder divs with <img class="variety-img" src="photos/mango-VARIETY.jpg"> -->
+          <div class="variety-grid">
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/mango-alphonso.jpg" alt="Alphonso"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Alphonso<span class="kn">ಹಾಫೂಸ್</span></div>
+          </div>
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/mango-mallika.jpg" alt="Mallika"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Mallika<span class="kn">ಮಲ್ಲಿಕಾ</span></div>
+          </div>
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/mango-benishan.jpg" alt="Benishan"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Benishan<span class="kn">ಬೇನಿಶಾನ್</span></div>
+          </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- GUAVA -->
+      <details class="tag">
+        <summary>
+          <!-- Replace with: <img class="fruit-pic" src="photos/guava.jpg" alt="Guava"> -->
+          <div class="fruit-pic ph" aria-hidden="true"></div>
+          <div class="fruit-head"><h3>Guava · ಸೀಬೆ</h3><small>Grafted · Our speciality · ಕಸಿ ಗಿಡ, ನಮ್ಮ ವಿಶೇಷ</small></div>
+          <div class="chev">⌄</div>
+        </summary>
+                <div class="tag-body">
+          <!-- VARIETIES: replace placeholder divs with <img class="variety-img" src="photos/guava-VARIETY.jpg"> -->
+          <div class="variety-grid">
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/guava-apple.jpg" alt="Apple Guava"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Apple Guava<span class="kn">ಆಪಲ್ ಸೀಬೆ</span></div>
+          </div>
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/guava-thai-white.jpg" alt="Thai White"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Thai White<span class="kn">ಥಾಯ್ ಬಿಳಿ</span></div>
+          </div>
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/guava-lalit.jpg" alt="Lalit"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Lalit<span class="kn">ಲಲಿತ್</span></div>
+          </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- WATER APPLE -->
+      <details class="tag">
+        <summary>
+          <!-- Replace with: <img class="fruit-pic" src="photos/water-apple.jpg" alt="Water Apple"> -->
+          <div class="fruit-pic ph" aria-hidden="true"></div>
+          <div class="fruit-head"><h3>Water Apple · ಪನ್ನೇರಳೆ</h3><small>Cool, juicy summer fruit · ತಂಪಾದ, ರಸಭರಿತ ಹಣ್ಣು</small></div>
+          <div class="chev">⌄</div>
+        </summary>
+                <div class="tag-body">
+          <!-- VARIETIES: replace placeholder divs with <img class="variety-img" src="photos/water-apple-VARIETY.jpg"> -->
+          <div class="variety-grid">
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/water-apple-red.jpg" alt="Red Water Apple"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Red Water Apple<span class="kn">ಕೆಂಪು ಪನ್ನೇರಳೆ</span></div>
+          </div>
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/water-apple-green.jpg" alt="Green Water Apple"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Green Water Apple<span class="kn">ಹಸಿರು ಪನ್ನೇರಳೆ</span></div>
+          </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- JAVA PLUM -->
+      <details class="tag">
+        <summary>
+          <!-- Replace with: <img class="fruit-pic" src="photos/java-plum.jpg" alt="Java Plum"> -->
+          <div class="fruit-pic ph" aria-hidden="true"></div>
+          <div class="fruit-head"><h3>Java Plum · ನೇರಳೆ</h3><small>Traditional &amp; healthy · ಸಾಂಪ್ರದಾಯಿಕ, ಆರೋಗ್ಯಕರ</small></div>
+          <div class="chev">⌄</div>
+        </summary>
+                <div class="tag-body">
+          <!-- VARIETIES: replace placeholder divs with <img class="variety-img" src="photos/java-plum-VARIETY.jpg"> -->
+          <div class="variety-grid">
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/jamun-local.jpg" alt="Local Jamun"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Local Jamun<span class="kn">ಸ್ಥಳೀಯ ನೇರಳೆ</span></div>
+          </div>
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/jamun-rajapuri.jpg" alt="Rajapuri"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Rajapuri<span class="kn">ರಾಜಾಪುರಿ</span></div>
+          </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- AVOCADO -->
+      <details class="tag">
+        <summary>
+          <!-- Replace with: <img class="fruit-pic" src="photos/avocado.jpg" alt="Avocado"> -->
+          <div class="fruit-pic ph" aria-hidden="true"></div>
+          <div class="fruit-head"><h3>Avocado · ಬೆಣ್ಣೆ ಹಣ್ಣು</h3><small>In high demand · ಹೆಚ್ಚು ಬೇಡಿಕೆಯ ಹಣ್ಣು</small></div>
+          <div class="chev">⌄</div>
+        </summary>
+                <div class="tag-body">
+          <!-- VARIETIES: replace placeholder divs with <img class="variety-img" src="photos/avocado-VARIETY.jpg"> -->
+          <div class="variety-grid">
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/avocado-hass.jpg" alt="Hass"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Hass<span class="kn">ಹ್ಯಾಸ್</span></div>
+          </div>
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/avocado-fuerte.jpg" alt="Fuerte"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Fuerte<span class="kn">ಫ್ಯುಯೆರ್ಟೆ</span></div>
+          </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- KOKUM -->
+      <details class="tag">
+        <summary>
+          <!-- Replace with: <img class="fruit-pic" src="photos/kokum.jpg" alt="Kokum"> -->
+          <div class="fruit-pic ph" aria-hidden="true"></div>
+          <div class="fruit-head"><h3>Kokum · ಪುನರ್ಪುಳಿ</h3><small>Coastal kitchen favourite · ಕರಾವಳಿ ಅಡುಗೆಯ ಪ್ರಿಯ</small></div>
+          <div class="chev">⌄</div>
+        </summary>
+                <div class="tag-body">
+          <!-- VARIETIES: replace placeholder divs with <img class="variety-img" src="photos/kokum-VARIETY.jpg"> -->
+          <div class="variety-grid">
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/kokum-local.jpg" alt="Local Kokum"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Local Kokum<span class="kn">ಸ್ಥಳೀಯ ಪುನರ್ಪುಳಿ</span></div>
+          </div>
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/kokum-red.jpg" alt="Red Kokum"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Red Kokum<span class="kn">ಕೆಂಪು ಪುನರ್ಪುಳಿ</span></div>
+          </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- CHICKOO -->
+      <details class="tag">
+        <summary>
+          <!-- Replace with: <img class="fruit-pic" src="photos/chickoo.jpg" alt="Chickoo"> -->
+          <div class="fruit-pic ph" aria-hidden="true"></div>
+          <div class="fruit-head"><h3>Chickoo · ಸಪೋಟ</h3><small>Sweet &amp; dependable · ಸಿಹಿ ಮತ್ತು ನಂಬಿಕೆಯ ಗಿಡ</small></div>
+          <div class="chev">⌄</div>
+        </summary>
+                <div class="tag-body">
+          <!-- VARIETIES: replace placeholder divs with <img class="variety-img" src="photos/chickoo-VARIETY.jpg"> -->
+          <div class="variety-grid">
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/chickoo-cricket-ball.jpg" alt="Cricket Ball"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Cricket Ball<span class="kn">ಕ್ರಿಕೆಟ್ ಬಾಲ್</span></div>
+          </div>
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/chickoo-kali-patti.jpg" alt="Kali Patti"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Kali Patti<span class="kn">ಕಾಳಿ ಪಟ್ಟಿ</span></div>
+          </div>
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/chickoo-dwarapudi.jpg" alt="Dwarapudi"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Dwarapudi<span class="kn">ದ್ವಾರಪುಡಿ</span></div>
+          </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- CARAMBOLA -->
+      <details class="tag">
+        <summary>
+          <!-- Replace with: <img class="fruit-pic" src="photos/carambola.jpg" alt="Carambola"> -->
+          <div class="fruit-pic ph" aria-hidden="true"></div>
+          <div class="fruit-head"><h3>Carambola · ಕಮರಾಕ್ಷಿ</h3><small>Star fruit · Beautiful &amp; unusual · ಸುಂದರ, ವಿಶಿಷ್ಟ</small></div>
+          <div class="chev">⌄</div>
+        </summary>
+                <div class="tag-body">
+          <!-- VARIETIES: replace placeholder divs with <img class="variety-img" src="photos/carambola-VARIETY.jpg"> -->
+          <div class="variety-grid">
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/carambola-sweet.jpg" alt="Sweet Star Fruit"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Sweet Star Fruit<span class="kn">ಸಿಹಿ ಕಮರಾಕ್ಷಿ</span></div>
+          </div>
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/carambola-golden.jpg" alt="Golden Star"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Golden Star<span class="kn">ಚಿನ್ನದ ನಕ್ಷತ್ರ</span></div>
+          </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- BARBADOS CHERRY -->
+      <details class="tag">
+        <summary>
+          <!-- Replace with: <img class="fruit-pic" src="photos/barbados-cherry.jpg" alt="Barbados Cherry"> -->
+          <div class="fruit-pic ph" aria-hidden="true"></div>
+          <div class="fruit-head"><h3>Barbados Cherry · ಬಾರ್ಬಡೋಸ್ ಚೆರ್ರಿ</h3><small>Fastest to fruit · ಅತಿ ಬೇಗ ಹಣ್ಣು ಕೊಡುವ ಗಿಡ</small></div>
+          <div class="chev">⌄</div>
+        </summary>
+                <div class="tag-body">
+          <!-- VARIETIES: replace placeholder divs with <img class="variety-img" src="photos/barbados-cherry-VARIETY.jpg"> -->
+          <div class="variety-grid">
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/cherry-barbados.jpg" alt="Barbados"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Barbados<span class="kn">ಬಾರ್ಬಡೋಸ್</span></div>
+          </div>
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/cherry-jamaican.jpg" alt="Jamaican"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Jamaican<span class="kn">ಜಮೈಕನ್</span></div>
+          </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- MULBERRY -->
+      <details class="tag">
+        <summary>
+          <!-- Replace with: <img class="fruit-pic" src="photos/mulberry.jpg" alt="Mulberry"> -->
+          <div class="fruit-pic ph" aria-hidden="true"></div>
+          <div class="fruit-head"><h3>Mulberry · ಹಿಪ್ಪುನೇರಳೆ</h3><small>Quick reward, kids' favourite · ಬೇಗ ಫಲ, ಮಕ್ಕಳ ಮೆಚ್ಚಿನ</small></div>
+          <div class="chev">⌄</div>
+        </summary>
+                <div class="tag-body">
+          <!-- VARIETIES: replace placeholder divs with <img class="variety-img" src="photos/mulberry-VARIETY.jpg"> -->
+          <div class="variety-grid">
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/mulberry-black.jpg" alt="Black Mulberry"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Black Mulberry<span class="kn">ಕಪ್ಪು ಹಿಪ್ಪುನೇರಳೆ</span></div>
+          </div>
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/mulberry-white.jpg" alt="White Mulberry"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">White Mulberry<span class="kn">ಬಿಳಿ ಹಿಪ್ಪುನೇರಳೆ</span></div>
+          </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- ORANGE -->
+      <details class="tag">
+        <summary>
+          <!-- Replace with: <img class="fruit-pic" src="photos/orange.jpg" alt="Orange"> -->
+          <div class="fruit-pic ph" aria-hidden="true"></div>
+          <div class="fruit-head"><h3>Orange · ಕಿತ್ತಳೆ</h3><small>Citrus for home gardens · ಮನೆ ತೋಟಕ್ಕೆ ಸಿಟ್ರಸ್</small></div>
+          <div class="chev">⌄</div>
+        </summary>
+                <div class="tag-body">
+          <!-- VARIETIES: replace placeholder divs with <img class="variety-img" src="photos/orange-VARIETY.jpg"> -->
+          <div class="variety-grid">
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/orange-nagpur.jpg" alt="Nagpur"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Nagpur<span class="kn">ನಾಗಪುರ</span></div>
+          </div>
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/orange-coorg.jpg" alt="Coorg"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Coorg<span class="kn">ಕೊಡಗು</span></div>
+          </div>
+          <div class="variety">
+            <!-- Replace with: <img class="variety-img" src="photos/orange-kinnow.jpg" alt="Kinnow"> -->
+            <div class="variety-img ph" aria-hidden="true"></div>
+            <div class="variety-name">Kinnow<span class="kn">ಕಿನ್ನೋ</span></div>
+          </div>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRESS / VIDEOS ================= -->
+<section id="press">
+  <div class="wrap">
+    <span class="eyebrow">Chiguru in the spotlight · ಚಿಗುರು ಸುದ್ದಿಯಲ್ಲಿ</span>
+    <h2>See what people are saying</h2>
+    <div class="kn-h">ಜನ ಏನು ಹೇಳುತ್ತಿದ್ದಾರೆ ನೋಡಿ</div>
+    <p class="lede">Bloggers and gardening channels have visited our nursery. Watch their videos to see the plants, the place and the people before you buy.</p>
+    <p class="lede kn">ಬ್ಲಾಗರ್‌ಗಳು ಮತ್ತು ತೋಟಗಾರಿಕೆ ಚಾನೆಲ್‌ಗಳು ನಮ್ಮ ನರ್ಸರಿಗೆ ಭೇಟಿ ನೀಡಿವೆ. ಖರೀದಿಸುವ ಮೊದಲು ಗಿಡ, ಸ್ಥಳ ಮತ್ತು ಜನರನ್ನು ಅವರ ವೀಡಿಯೊಗಳಲ್ಲಿ ನೋಡಿ.</p>
+
+    <div class="press-grid">
+      <!-- PLACEHOLDER: replace href, titles and descriptions with real video links -->
+      <a class="press" href="#" target="_blank" rel="noopener">
+        <div class="play">▶</div>
+        <h3>Nursery tour by [Blogger name]</h3>
+        <p>A full walk-through of Chiguru Nursery — the grafting process, mother plants and varieties.</p>
+        <p class="kn">ನರ್ಸರಿಯ ಸಂಪೂರ್ಣ ಸುತ್ತಾಟ — ಕಸಿ ಪ್ರಕ್ರಿಯೆ, ತಾಯಿ ಗಿಡಗಳು ಮತ್ತು ತಳಿಗಳು.</p>
+        <span>Watch video · ವೀಡಿಯೊ ನೋಡಿ →</span>
+      </a>
+      <a class="press" href="#" target="_blank" rel="noopener">
+        <div class="play">▶</div>
+        <h3>Interview with Sarvesh Rao</h3>
+        <p>The founder shares how a grafting hobby became one of the region's trusted nurseries.</p>
+        <p class="kn">ಕಸಿ ಹವ್ಯಾಸ ವಿಶ್ವಾಸಾರ್ಹ ನರ್ಸರಿಯಾಗಿ ಬೆಳೆದ ಕಥೆ — ಸಂಸ್ಥಾಪಕರ ಮಾತಿನಲ್ಲಿ.</p>
+        <span>Watch video · ವೀಡಿಯೊ ನೋಡಿ →</span>
+      </a>
+      <a class="press" href="#" target="_blank" rel="noopener">
+        <div class="play">▶</div>
+        <h3>Customer garden visit</h3>
+        <p>See Chiguru plants fruiting in real home gardens, years after planting.</p>
+        <p class="kn">ನೆಟ್ಟ ಹಲವು ವರ್ಷಗಳ ನಂತರ ಮನೆ ತೋಟಗಳಲ್ಲಿ ಫಲ ಕೊಡುತ್ತಿರುವ ಚಿಗುರು ಗಿಡಗಳನ್ನು ನೋಡಿ.</p>
+        <span>Watch video · ವೀಡಿಯೊ ನೋಡಿ →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Ready to plant something that lasts?</h2>
+      <div class="kn-h">ತಲೆಮಾರು ಉಳಿಯುವ ಗಿಡ ನೆಡಲು ಸಿದ್ಧರೇ?</div>
+      <p>Message us on WhatsApp with the plants you liked — we'll confirm availability, price and the best time to plant.</p>
+      <p class="kn last">ನಿಮಗೆ ಇಷ್ಟವಾದ ಗಿಡಗಳ ಹೆಸರನ್ನು ವಾಟ್ಸಾಪ್‌ನಲ್ಲಿ ಕಳುಹಿಸಿ — ಲಭ್ಯತೆ, ಬೆಲೆ ಮತ್ತು ನೆಡಲು ಉತ್ತಮ ಸಮಯ ತಿಳಿಸುತ್ತೇವೆ.</p>
+      <div class="cta-row">
+        <a class="btn btn-wa" href="https://wa.me/919482063944?text=Hi%20Chiguru%20Nursery%2C%20I%20saw%20your%20catalogue%20and%20want%20to%20order%20plants.">💬 WhatsApp · ವಾಟ್ಸಾಪ್ ಮಾಡಿ</a>
+        <a class="btn btn-ghost" href="tel:+919482063944">📞 +91 94820 63944</a>
+      </div>
+      <div class="social-row">
+        <!-- PLACEHOLDER: replace # with real profile URLs -->
+        <a href="#" target="_blank" rel="noopener">📷 Instagram</a>
+        <a href="#" target="_blank" rel="noopener">👍 Facebook</a>
+        <a href="https://www.chigurunursery.in" target="_blank" rel="noopener">🌐 chigurunursery.in</a>
+        <!-- PLACEHOLDER: replace # with YouTube channel URL -->
+        <a href="https://youtube.com/@chigurunursery?si=ESc-Gh_hJVvAlNaL" target="_blank" rel="noopener">▶ YouTube · ಯೂಟ್ಯೂಬ್</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Chiguru Nursery · Sarvesh Rao, Founder · All plants subject to seasonal availability
+  <span class="kn">ಎಲ್ಲ ಗಿಡಗಳು ಋತುಮಾನದ ಲಭ್ಯತೆಗೆ ಒಳಪಟ್ಟಿವೆ</span></div>
+</footer>
+
+<!-- ================= STICKY BAR ================= -->
+<nav class="sticky-bar" aria-label="Quick contact">
+  <a class="s-wa" href="https://wa.me/919482063944?text=Hi%20Chiguru%20Nursery%2C%20I%20saw%20your%20catalogue.">
+    <span class="s-icon">💬</span>WhatsApp
+  </a>
+  <a class="s-call" href="tel:+919482063944">
+    <span class="s-icon">📞</span>Call
+  </a>
+  <a class="s-yt" href="https://youtube.com/@chigurunursery?si=ESc-Gh_hJVvAlNaL" target="_blank" rel="noopener">
+    <span class="s-icon">▶</span>YouTube
+  </a>
+</nav>
+
+</body>
+</html>
